@@ -1,25 +1,38 @@
 {
-    "name": "jrnl",
-    "displayName": "Jrnl",
-    "description": "Highlighting for the Jrnl text file format",
-    "version": "0.0.1",
-    "engines": {
-        "vscode": "^1.34.0"
-    },
-    "categories": [
-        "Programming Languages"
+  "name": "jrnl",
+  "displayName": "Jrnl",
+  "description": "Highlighting for the Jrnl text file format",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.34.0"
+  },
+  "license": "MIT",
+  "preview": true,
+  "publisher": "notyet",
+  "repository": "https://github.com/anandaroop/vscode-jrnl",
+  "categories": [
+    "Other"
+  ],
+  "contributes": {
+    "languages": [
+      {
+        "id": "jrnl",
+        "aliases": [
+          "Jrnl",
+          "jrnl"
+        ],
+        "extensions": [
+          "jrnl.txt"
+        ],
+        "configuration": "./language-configuration.json"
+      }
     ],
-    "contributes": {
-        "languages": [{
-            "id": "jrnl",
-            "aliases": ["Jrnl", "jrnl"],
-            "extensions": [""],
-            "configuration": "./language-configuration.json"
-        }],
-        "grammars": [{
-            "language": "jrnl",
-            "scopeName": "text.jrnl",
-            "path": "./syntaxes/jrnl.tmLanguage.json"
-        }]
-    }
+    "grammars": [
+      {
+        "language": "jrnl",
+        "scopeName": "text.jrnl",
+        "path": "./syntaxes/jrnl.tmLanguage.json"
+      }
+    ]
+  }
 }
