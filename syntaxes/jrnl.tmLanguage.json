@@ -1,32 +1,28 @@
 {
-	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
-	"name": "Jrnl",
-	"patterns": [
-		{
-			"include": "#keywords"
-		},
-		{
-			"include": "#strings"
-		}
-	],
-	"repository": {
-		"keywords": {
-			"patterns": [{
-				"name": "keyword.control.jrnl",
-				"match": "\\b(if|while|for|return)\\b"
-			}]
-		},
-		"strings": {
-			"name": "string.quoted.double.jrnl",
-			"begin": "\"",
-			"end": "\"",
-			"patterns": [
-				{
-					"name": "constant.character.escape.jrnl",
-					"match": "\\\\."
-				}
-			]
-		}
-	},
-	"scopeName": "text.jrnl"
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "Jrnl",
+  "patterns": [
+    {
+      "include": "#keywords"
+    }
+  ],
+  "repository": {
+    "keywords": {
+      "patterns": [
+        {
+          "name": "keyword.timestamp.jrnl",
+          "match": "^\\d{4}-\\d{2}-\\d{2} \\d{2}:\\d{2}"
+        },
+        {
+          "name": "keyword.control.tag.jrnl",
+          "match": "\\s@\\w+\\b"
+        },
+        {
+          "name": "comment.extraLines.jrnl",
+          "match": "^\\w+.*"
+        }
+      ]
+    }
+  },
+  "scopeName": "text.jrnl"
 }
